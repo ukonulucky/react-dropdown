@@ -1,23 +1,24 @@
 import React, { useState } from 'react'
 import { serviceDropDown } from "../assets/NavItems" 
 import { Link } from "react-router-dom"
+import "../styles/Services.css"
 
 export default function ServicesDropDown() {
     const [dropDown, setdropDown] = useState(true)
   return (
       <div>
                 
-                <div className="serviceDropDown" onClick={ () => setdropDown(false)}>
-                  <ul className={ dropDown ? "dropDown" : "hideDropDown" }>  
+                <div  className={ dropDown ? "serviceDropDown" : "hideDropDown" } onClick={ () => setdropDown(false)}>
+                  <ul className= "dropDown" >  
               
                   {
                       serviceDropDown.map(item => {
                           return (
-                              <Link key={ item.id} to={ item.path}>
-                                  <li className={ item.cName}>
+                              <li  className={ item.cName} key={ item.id} >
+                                  <Link to={ item.path}>
                                       { item.title} 
-                              </li>
                               </Link>
+                              </li>
                           )
                               
                           

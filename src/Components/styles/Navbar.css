@@ -1,5 +1,5 @@
 .navbar {
-  height: 70px;
+  height: 10vh;
   background-color: #231d1d;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,21 +42,24 @@
   width: 70vw;
 }
 
-.navbar ul a {
+.navbar ul .nav-item {
   text-decoration: none;
-  color: white;
   margin-right: 20px;
   padding: 10px 20px;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
-.navbar ul a:hover {
+.navbar ul .nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar ul .nav-item:hover {
   background-color: crimson;
   color: white;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  margin-right: 25px;
 }
 
 .navbar button {
@@ -73,57 +76,14 @@
   text-decoration: none;
 }
 
-.serviceDropDown {
-  position: absolute;
-  top: 100px;
-  border: 10px solid red;
-  top: 20px;
-  width: 100px;
-  background-color: magenta;
-  padding: 10px 0;
-}
-
-.serviceDropDown .dropDown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 5px;
-  list-style: none;
-}
-
-.serviceDropDown .dropDown a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: white;
-  display: block;
-}
-
-.serviceDropDown .dropDown a li {
-  display: block;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.serviceDropDown .dropDown a li:hover {
-  background-color: darkmagenta;
-}
-
 .nav-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   position: relative;
-}
-
-.hideDropDown {
-  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
 }
 /*# sourceMappingURL=Navbar.css.map */

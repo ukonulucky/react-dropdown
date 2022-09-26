@@ -1,0 +1,45 @@
+.serviceDropDown{
+    position: absolute;
+    top:9.5vh;
+    left: 0;
+    background-color: magenta;
+    width: 200px;
+    padding: 10px 0;
+
+ .dropDown{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      .submenu-item{
+        text-decoration: none;
+        display: block;
+        height: 100%;
+        width: 100%;
+        font-size: 1.1rem;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        
+        & > * {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px 10px;
+            &:hover{
+                background-color:darkmagenta;
+                padding: 15px 0;
+              
+          }
+        }
+        
+      }
+    }
+}
+
+.hideDropDown{
+    display:none
+}
+
+

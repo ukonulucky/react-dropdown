@@ -6,7 +6,8 @@ import { navItems, serviceDropDown } from "../assets/NavItems"
 import "../styles/Navbar.css"
 import ServicesDropDown from './ServicesDropDown';
 function Navbar() {
-    const [dropDown, setdropDown] = useState(true)
+    const [dropDown, setdropDown] = useState(false)
+    console.log(dropDown)
   return (
       <div>
             <div className="navbar">
@@ -17,29 +18,28 @@ function Navbar() {
           <ul>
               {
                       navItems.map(item => {
-                          if (item.title == "Services") {
+                          if (item.title === "Services") {
                               return (
                                 
-                                      <Link
-                              
-                                        to={item.path} key={item.id}>
-                                        <li className={ item.cName}>
+                                  <li onMouseEnter={() => setdropDown(true)} onMouseLeave={() => setdropDown(false)}
+                                         className={ item.cName}
+                                        key={item.id}>
+                                        <Link to={item.path}  >
                                           {item.title}
-                                          <ServicesDropDown />
-                                          </li>
-                                         
                                       </Link>
-                                
+                                      { dropDown &&   <ServicesDropDown /> }
+                                  </li>  
                           )
                       }
                       return (
-                          <Link
-                              
-                              to={item.path} key={item.id}>
-                              <li className={ item.cName}>
-                              { item.title}
-                      </li>
-                          </Link>
+                         
+                        <li 
+                        className={ item.cName}
+                       key={item.id}>
+                       <Link to={item.path}  >
+                         {item.title}
+                     </Link>    
+                 </li>  
                   )
               })
               }
@@ -52,7 +52,7 @@ function Navbar() {
          </button>
 
           </div>
-         
+          <ServicesDropDown />
     </div>
   )
 }
