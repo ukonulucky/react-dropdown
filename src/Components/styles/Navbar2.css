@@ -1,0 +1,210 @@
+:root {
+  --bg: pink;
+  --text:#333
+;
+}
+
+.nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10vh;
+  width: 100%;
+  background-color: var(--bg);
+}
+
+@media screen and (max-width: 960px) {
+  .nav-item {
+    display: relative;
+  }
+}
+
+.nav-item .nav-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  font-size: 30px;
+  color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-item .nav-logo {
+    display: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    padding: 0px 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 35px;
+    font-weight: bolder;
+  }
+  .nav-item .nav-logo span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+  }
+}
+
+.nav-item .nav-logo .mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 960px) {
+  .nav-item .nav-logo .mobile {
+    display: none;
+  }
+}
+
+.nav-item ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70vw;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+.nav-item ul .ul-btn {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-item ul {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: 100%;
+    opacity: 0.8;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: var(--bg);
+    padding: 10px 0px;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+    display: none;
+  }
+  .nav-item ul .ul-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-item ul .ul-btn button {
+    color: crimson;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px 25px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+.nav-item ul .list-item {
+  margin-right: 50px;
+  list-style: none;
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-item ul .list-item a {
+  color: white;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  text-transform: capitalize;
+  text-decoration: none;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  display: block;
+  width: 100%;
+}
+
+.nav-item ul .list-item a:hover {
+  border: 0;
+  background-color: darkcyan;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-item ul .list-item a:hover {
+    border-radius: 0p;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .nav-item .show {
+    display: none;
+    width: 0px;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .nav-item .show-anim {
+    display: block;
+    width: 100vw;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .nav-item .btn {
+    display: none;
+  }
+}
+
+.nav-item .btn button {
+  color: crimson;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 15px 25px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Navbar2.css.map */

@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from './Components/Pages/Navbar';
 import HomePage from './Components/Pages/HomePage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Navbar2 from './Components/Pages/Navbar2';
+import InterSectionDelay from './Components/Pages/interSectionDelay';
 
 function App() {
   return (
@@ -12,8 +14,9 @@ function App() {
         
           <Route path="/" element={
             <>
-             <Navbar />
-            <HomePage />
+             <Navbar2 />
+              <HomePage />
+              <InterSectionDelay />
             </>
             } />
       </Routes>
